@@ -27,13 +27,13 @@ Given the above restrictions I've come to think of the following as the optimal 
   modules/         # reusable generic modules if you're doing mono-repo
   bin/             # any shared tooling
 ```
-Avoid the complexity of refactoring an over organized repository that encodes changing information in it's
-directory structure.  Record ownership in meta-data.  Include environment when needed.  
+Avoid the complexity of refactoring an over organized repository that encodes unstable information in it's
+directory structure.  Record ownership in meta-data.  Include environment when needed not as a requirement.
 
 Don't mix root modules/configurations with resuable modules.  Module cross dependencies can become a plane
 of hell.
 
-Don't use root modules/configurations sub/private modules if it can be avoided.  This can lead to a profusion
+Don't use private sub modules in root modules/configurations if it can be avoided.  This can lead to a profusion
 of code variations that become difficult to support.
 
 External module repostories can be defined by varying git tag wild cards.  This enables external module
